@@ -22,7 +22,7 @@ jobs:
         & 'C:\Program Files\Microsoft Visual Studio\2022\Enterprise\MSBuild\Current\Bin\msbuild.exe' '.\Customer.Database\Customer.Database.sqlproj' /p:Configuration=Release
 
     - name: Upload dacpac
-    - uses: actions/upload-artifact@v3
+      uses: actions/upload-artifact@v3
       with:
         name: DACPAC
         path: ${{ github.workspace }}/bin/Release/
